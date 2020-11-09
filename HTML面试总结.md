@@ -21,7 +21,7 @@
 ### 4、行内元素有哪些？块级元素有哪些？空(void)元素有那些？行内元素和块级元素有什么区别？
 * 行内元素有：a b span img input select strong
 * 块级元素有：div ul ol li dl dt dd h1 h2 h3 h4… p
-* 空元素：<br> <hr> <img> <input> <link> <meta>
+* 空元素：\<br> <hr> <img> <input> <link> <meta>
 * 行内元素不可以设置宽高，不独占一行
 * 块级元素可以设置宽高，独占一行
 
@@ -33,4 +33,4 @@
 ### 6、介绍一下你对浏览器内核的理解？
 * 浏览器内核又可以分成两部分：渲染引擎和JS引擎。 
 * 渲染引擎主要负责取得网页的内容、整理讯息、计算网页的显示方式等，JS引擎则是解析 Javascript 语言，执行 javascript 语言来实现网页的动态效果。
-[JavaScript 引擎](https://github.com/stephentian/33-js-concepts#30-javascript-%E5%BC%95%E6%93%8E)
+> [JavaScript 引擎](https://github.com/stephentian/33-js-concepts#30-javascript-%E5%BC%95%E6%93%8E)
