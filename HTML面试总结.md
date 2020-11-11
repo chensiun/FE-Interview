@@ -34,3 +34,7 @@
 * 浏览器内核又可以分成两部分：渲染引擎和JS引擎。 
 * 渲染引擎主要负责取得网页的内容、整理讯息、计算网页的显示方式等，JS引擎则是解析 Javascript 语言，执行 javascript 语言来实现网页的动态效果。
 > [JavaScript 引擎](https://github.com/stephentian/33-js-concepts#30-javascript-%E5%BC%95%E6%93%8E)
+
+### “看不见”的 HTML 标签
+* meta 标签：自动刷新/跳转
+> ```<meta http-equiv="Refresh" content="5; URL=page2.html">``` // 5s 之后自动跳转到同域下的 page2.html 页面
