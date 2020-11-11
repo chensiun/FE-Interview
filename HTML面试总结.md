@@ -38,9 +38,7 @@
 
 ### 7、“看不见”的 HTML 标签
 * meta 标签：自动刷新/跳转
-> ```html
-  <meta http-equiv="Refresh" content="5; URL=page2.html">
-  ``` // 5s 之后自动跳转到同域下的 page2.html 页面  
+> ```<meta http-equiv="Refresh" content="5; URL=page2.html">``` // 5s 之后自动跳转到同域下的 page2.html 页面  
 > ```<meta http-equiv="Refresh" content="60">``` // 60s后刷新当前页面  
 * link 标签：通过预处理提升渲染速度
 > ```dns-prefetch```。当 link 标签的 rel 属性值为“dns-prefetch”时，浏览器会对某个域名预先进行 DNS 解析并缓存。  
