@@ -10,6 +10,7 @@
 * `<script>` - HTML 解析中断，脚本被提取并立即执行。执行结束后，HTML 解析继续。
 * `<script async>` - 脚本的提取、执行的过程与 HTML 解析过程并行，脚本执行完毕可能在 HTML 解析完毕之前。当脚本与页面上其他脚本独立时，可以使用async，比如用作页面统计分析。
 * `<script defer>` - 脚本仅提取过程与 HTML 解析过程并行，脚本的执行将在 HTML 解析完毕后进行。如果有多个含defer的脚本，脚本的执行顺序将按照在 document 中出现的位置，从上到下顺序执行。
+* HTML5 标准 type 属性，对应值为“module”。让浏览器按照 ECMA Script 6 标准将文件当作模块进行解析，默认阻塞效果同 defer，也可以配合 async 在请求完成后立即执行。
 > *注意：没有src属性的脚本，async和defer属性会被忽略。*
 
 ### 3、页面导入样式时，使用link和@import有什么区别？
@@ -37,4 +38,10 @@
 
 ### “看不见”的 HTML 标签
 * meta 标签：自动刷新/跳转
-> ```<meta http-equiv="Refresh" content="5; URL=page2.html">``` // 5s 之后自动跳转到同域下的 page2.html 页面
+> ```html <meta http-equiv="Refresh" content="5; URL=page2.html">``` // 5s 之后自动跳转到同域下的 page2.html 页面
+> ```<meta http-equiv="Refresh" content="60">``` // 60s后刷新当前页面
+* link 标签：通过预处理提升渲染速度
+> dns-prefetch。当 link 标签的 rel 属性值为“dns-prefetch”时，浏览器会对某个域名预先进行 DNS 解析并缓存。
+> preconnect。让浏览器在一个 HTTP 请求正式发给服务器前预先执行一些操作，这包括 DNS 解析、TLS 协商、TCP 握手，通过消除往返延迟来为用户节省时间。
+> prefetch/preload。两个值都是让浏览器预先下载并缓存某个资源，但不同的是，prefetch 可能会在浏览器忙时被忽略，而 preload 则是一定会被预先下载。
+> prerender。浏览器不仅会加载资源，还会解析执行页面，进行预渲染。
