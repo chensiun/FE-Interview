@@ -45,3 +45,10 @@
 > ```preconnect```。让浏览器在一个 HTTP 请求正式发给服务器前预先执行一些操作，这包括 DNS 解析、TLS 协商、TCP 握手，通过消除往返延迟来为用户节省时间。  
 > ```prefetch/preload```。两个值都是让浏览器预先下载并缓存某个资源，但不同的是，prefetch 可能会在浏览器忙时被忽略，而 preload 则是一定会被预先下载。  
 > ```prerender```。浏览器不仅会加载资源，还会解析执行页面，进行预渲染。  
+
+### 8、重排(reflow)和重绘(repaint)
+* 重排(reflow)：当DOM的变化影响了元素的几何信息(元素的的位置和尺寸大小)，浏览器需要重新计算元素的几何属性，将其安放在界面中的正确位置，这个过程叫做重排。（重排也叫回流，简单的说就是重新生成布局，重新排列元素。）  
+* 重绘(Repaints)：当一个元素的外观发生改变，但没有改变布局,重新把元素外观绘制出来的过程，叫做重绘。  
+> [重排(reflow)和重绘(repaint)](https://juejin.im/post/6844904083212468238)  
+> [前端性能优化之重排和重绘](https://segmentfault.com/a/1190000016990089)  
+> [介绍下重绘和回流（Repaint & Reflow），以及如何进行优化](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/24)
